@@ -48,14 +48,14 @@ public class BurgerTest {
     @Test
     public void checkMoveIngredientTest() {
         Burger burger = new Burger();
-        Ingredient ingredient1 = new Ingredient(SAUCE, "hot sauce", 100);
-        Ingredient ingredient2 = new Ingredient(FILLING, "cutlet", 100);
-        Ingredient ingredient3 = new Ingredient(FILLING, "sausage", 300);
-        burger.addIngredient(ingredient1);
-        burger.addIngredient(ingredient2);
-        burger.addIngredient(ingredient3);
+        Ingredient sauce = new Ingredient(SAUCE, "hot sauce", 100);
+        Ingredient cutlet = new Ingredient(FILLING, "cutlet", 100);
+        Ingredient sausage = new Ingredient(FILLING, "sausage", 300);
+        burger.addIngredient(sauce);
+        burger.addIngredient(cutlet);
+        burger.addIngredient(sausage);
         burger.moveIngredient(0, 2);
-        Assert.assertEquals(2, burger.ingredients.indexOf(ingredient1));
+        Assert.assertEquals(2, burger.ingredients.indexOf(sauce));
     }
 
     @Test
